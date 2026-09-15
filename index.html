@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -17,12 +19,7 @@
 <header class="site-header" id="top">
   <div class="wrap header-inner">
     <a href="#top" class="brand">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 100 100" width="30" height="30">
-          <path d="M50 15 C 58 35, 80 40, 85 50 C 80 60, 58 65, 50 85 C 42 65, 20 60, 15 50 C 20 40, 42 35, 50 15 Z" fill="none" stroke="currentColor" stroke-width="3"/>
-          <circle cx="50" cy="50" r="4" fill="currentColor"/>
-        </svg>
-      </span>
+      <img class="brand-mark" src="assets/logo-badge.png" width="42" height="42" alt="Black Lotus Recording emblem" />
       <span class="brand-name">Black&nbsp;Lotus <em>Recording</em></span>
     </a>
     <nav class="main-nav" aria-label="Primary">
@@ -40,9 +37,12 @@
 <main>
 
   <section class="hero">
+    <img class="hero-bg" src="assets/studio-1.jpg" alt="" aria-hidden="true" />
+    <div class="hero-scrim" aria-hidden="true"></div>
     <div class="wrap hero-inner">
       <p class="eyebrow">Recording · Mixing · Mastering</p>
       <h1>Your sound,<br>captured in the dark.</h1>
+      <p class="hero-tagline">Where every musician belongs.</p>
       <p class="hero-sub">Black Lotus Recording is a private studio built for artists who take their craft seriously. Analog warmth, modern precision, zero distractions.</p>
       <div class="hero-actions">
         <a href="#booking" class="btn btn-primary">Book a Session</a>
@@ -147,13 +147,9 @@
         <p>Black Lotus Recording is a single dedicated suite — no double-booked rooms, no rushing. Just a treated live room, a private lounge, and a control room tuned to tell you the truth about your mix.</p>
         <p>Coffee's on. Bring your session or start from nothing.</p>
       </div>
-      <div class="studio-visual" aria-hidden="true">
-        <div class="lotus-glow"></div>
-        <svg viewBox="0 0 200 200" width="220" height="220">
-          <path d="M100 30 C 116 70, 160 80, 170 100 C 160 120, 116 130, 100 170 C 84 130, 40 120, 30 100 C 40 80, 84 70, 100 30 Z" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.9"/>
-          <path d="M100 50 C 110 75, 140 85, 150 100 C 140 115, 110 125, 100 150 C 90 125, 60 115, 50 100 C 60 85, 90 75, 100 50 Z" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
-          <circle cx="100" cy="100" r="6" fill="currentColor"/>
-        </svg>
+      <div class="studio-visual">
+        <div class="lotus-glow" aria-hidden="true"></div>
+        <img src="assets/studio-detail.jpg" alt="Inside the Black Lotus Recording control room, lit in pink and violet neon" />
       </div>
     </div>
   </section>
@@ -227,9 +223,12 @@
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <div>
-      <span class="brand-name small">Black&nbsp;Lotus <em>Recording</em></span>
-      <p>3217 Winona Avenue, Unit B, Burbank, CA</p>
+    <div class="footer-brand">
+      <img src="assets/logo-badge.png" width="36" height="36" alt="Black Lotus Recording emblem" />
+      <div>
+        <span class="brand-name small">Black&nbsp;Lotus <em>Recording</em></span>
+        <p>3217 Winona Avenue, Unit B, Burbank, CA</p>
+      </div>
     </div>
     <div class="footer-contact">
       <a href="mailto:info@blacklotusrecording.com">info@blacklotusrecording.com</a>
