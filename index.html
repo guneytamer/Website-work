@@ -96,32 +96,42 @@
       <div class="rate-grid">
         <div class="rate-card">
           <h3>Session Block</h3>
-          <p class="price">$65<span>/hr</span></p>
+          <p class="price">$55<span>/hr</span></p>
           <ul>
-            <li>Engineer included</li>
+            <li>Without engineer</li>
+            <li>$85/hr with engineer</li>
             <li>Full analog + digital chain</li>
-            <li>4-hour minimum</li>
           </ul>
           <a href="#booking" class="btn btn-line">Book This</a>
         </div>
         <div class="rate-card featured">
           <p class="tag">Most booked</p>
-          <h3>Day Lockout</h3>
+          <h3>8 Hour Block</h3>
           <p class="price">$450<span>/day</span></p>
           <ul>
-            <li>8 hours, one act, exclusive access</li>
-            <li>Engineer included</li>
+            <li>Without engineer</li>
+            <li>One act, exclusive access</li>
             <li>Free session storage</li>
           </ul>
           <a href="#booking" class="btn btn-primary">Book This</a>
         </div>
         <div class="rate-card">
-          <h3>Mix / Master</h3>
-          <p class="price">$150<span>/track</span></p>
+          <h3>Mixing</h3>
+          <p class="price">$500<span>/track</span></p>
           <ul>
-            <li>Mix or master, per song</li>
+            <li>Detailed, genre-aware mix</li>
             <li>2 revision rounds</li>
             <li>Stems delivered on request</li>
+          </ul>
+          <a href="#booking" class="btn btn-line">Book This</a>
+        </div>
+        <div class="rate-card">
+          <h3>Mastering</h3>
+          <p class="price">$150<span>/track</span></p>
+          <ul>
+            <li>Loudness-competitive master</li>
+            <li>2 revision rounds</li>
+            <li>Streaming + vinyl ready</li>
           </ul>
           <a href="#booking" class="btn btn-line">Book This</a>
         </div>
@@ -155,6 +165,17 @@
       <p class="section-sub">Fill out the form and we'll confirm availability within 24 hours.</p>
 
       <form class="booking-form" id="bookingForm" novalidate>
+        <!--
+          Emails every submission to info@blacklotusrecording.com via Web3Forms.
+          Activate it: go to https://web3forms.com, enter info@blacklotusrecording.com,
+          and it instantly emails you a free access key — paste it below in place of
+          YOUR_WEB3FORMS_ACCESS_KEY. No account or backend required.
+        -->
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+        <input type="hidden" name="subject" value="New Booking Request — Black Lotus Recording" />
+        <input type="hidden" name="from_name" value="Black Lotus Recording Website" />
+        <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" />
+
         <div class="form-row">
           <div class="field">
             <label for="name">Name</label>
@@ -175,10 +196,11 @@
             <label for="service">Service</label>
             <select id="service" name="service" required>
               <option value="" disabled selected>Select a service</option>
-              <option value="recording">Recording — Session Block</option>
-              <option value="lockout">Recording — Day Lockout</option>
-              <option value="mixing">Mixing</option>
-              <option value="mastering">Mastering</option>
+              <option value="session-no-engineer">Session Block — $55/hr (no engineer)</option>
+              <option value="session-engineer">Session Block — $85/hr (with engineer)</option>
+              <option value="8-hour-block">8 Hour Block — $450 (no engineer)</option>
+              <option value="mixing">Mixing — $500/track</option>
+              <option value="mastering">Mastering — $150/track</option>
               <option value="production">Production</option>
             </select>
           </div>
@@ -212,11 +234,11 @@
   <div class="wrap footer-inner">
     <div>
       <span class="brand-name small">Black&nbsp;Lotus <em>Recording</em></span>
-      <p>123 Sable Street, Los Angeles, CA</p>
+      <p>3217 Winona Avenue, Unit B, Burbank, CA</p>
     </div>
     <div class="footer-contact">
-      <a href="mailto:book@blacklotusrecording.com">book@blacklotusrecording.com</a>
-      <a href="tel:+13235550142">(323) 555-0142</a>
+      <a href="mailto:info@blacklotusrecording.com">info@blacklotusrecording.com</a>
+      <a href="tel:+18188568089">(818) 856-8089</a>
     </div>
     <div class="footer-social">
       <a href="#" aria-label="Instagram">Instagram</a>

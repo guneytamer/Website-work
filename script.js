@@ -12,11 +12,13 @@ navToggle.addEventListener("click", () => {
 const dateInput = document.getElementById("date");
 dateInput.min = new Date().toISOString().split("T")[0];
 
-// Booking form
+// Booking form — submits to Web3Forms, which emails the request to
+// info@blacklotusrecording.com (see access_key setup note in index.html).
 const form = document.getElementById("bookingForm");
 const note = document.getElementById("formNote");
+const submitBtn = form.querySelector("button[type=submit]");
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   if (!form.checkValidity()) {
@@ -24,9 +26,32 @@ form.addEventListener("submit", (e) => {
     return;
   }
 
-  const data = Object.fromEntries(new FormData(form).entries());
+  const formData = new FormData(form);
+  const firstName = formData.get("name").split(" ")[0];
 
-  note.textContent = `Thanks, ${data.name.split(" ")[0]} — your request for ${data.date} at ${data.time} has been received. We'll confirm by email shortly.`;
+  submitBtn.disabled = true;
+  note.textContent = "Sending your request...";
   note.classList.remove("error");
-  form.reset();
+
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: formData,
+    });
+    const result = await response.json();
+
+    if (result.success) {
+      note.textContent = `Thanks, ${firstName} — your request has been emailed to us. We'll confirm availability within 24 hours.`;
+      note.classList.remove("error");
+      form.reset();
+    } else {
+      throw new Error(result.message || "Submission failed");
+    }
+  } catch (err) {
+    note.textContent = `Sorry, something went wrong sending your request. Please email info@blacklotusrecording.com or call (818) 856-8089 directly.`;
+    note.classList.add("error");
+  } finally {
+    submitBtn.disabled = false;
+  }
 });

@@ -255,7 +255,7 @@ h1, h2, h3 {
 /* Rates */
 .rate-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 .rate-card {
@@ -377,6 +377,10 @@ h1, h2, h3 {
 }
 .form-note.error { color: #f28c8c; }
 
+.hp-field { display: none; }
+
+.btn[disabled] { opacity: 0.6; cursor: not-allowed; }
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--surface-line);
@@ -438,13 +442,14 @@ h1, h2, h3 {
   .main-nav a.nav-cta { margin-top: 10px; border: 1px solid var(--accent-dim); text-align: center; }
   .nav-toggle { display: flex; }
   .cards { grid-template-columns: 1fr 1fr; }
-  .rate-grid { grid-template-columns: 1fr; }
+  .rate-grid { grid-template-columns: 1fr 1fr; }
   .studio-grid { grid-template-columns: 1fr; }
   .strip-inner { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 560px) {
   .cards { grid-template-columns: 1fr; }
+  .rate-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .booking-form { padding: 26px; }
   .strip-inner { grid-template-columns: 1fr; }
