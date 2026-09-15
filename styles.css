@@ -429,15 +429,14 @@ h1, h2, h3 {
 .footer-brand { display: flex; align-items: center; gap: 12px; }
 .footer-brand img { border-radius: 50%; flex-shrink: 0; }
 .footer-inner p { color: var(--text-faint); font-size: 14px; margin: 6px 0 0; }
-.footer-contact, .footer-social {
+.footer-contact {
   display: flex;
   flex-direction: column;
   gap: 8px;
   font-size: 14px;
   color: var(--text-dim);
 }
-.footer-social { flex-direction: row; gap: 18px; align-items: flex-start; }
-.footer-contact a:hover, .footer-social a:hover { color: var(--accent-strong); }
+.footer-contact a:hover { color: var(--accent-strong); }
 .footer-copy {
   text-align: center;
   font-size: 12px;
